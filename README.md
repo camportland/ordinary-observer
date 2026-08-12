@@ -61,4 +61,4 @@ python3 -m oo.cli samples/a_paraphrase.txt samples/b_original.txt
 Python - `sentence-transformers` (local, no API) - `rapidfuzz` - `numpy` - Anthropic API (cached)
 
 ## Design
-Key design decisions and their rationale are logged in [DECISIONS.md] (DECISIONS.md).
+Key design decisions and their rationale are logged in [DECISIONS.md](DECISIONS.md).
