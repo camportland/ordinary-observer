@@ -15,15 +15,13 @@ In Progress - building in weekly milestones
 - [ ] Week 4 - Calibration, docs, polish
 
 ## What it does today
-Given two text works, it computes three families of local similarity signals:
+Given two text works (Work A = suspect/AI generated, Work B = original), it produces a **copyright-risk assessment** by combining three layers:
 
-- **Semantic** - meaning-level similarity via local sentence embeddings
-- **Verbatim** - literal-copying signals (n-gram overlap, longest common run, fuzzy match)
-- **Structural** - whether shared content appears in the same order
+- **Local similarity** - semantic similarity (sentence embeddings), verbatim overlap (n-gram/longest-common-run/fuzzy), and structural alignment. Runs offline, no API.
+- **Legal reasoninng** - an LLM classifies each cshared element as protectable expression vs. unprotectable idea/fact/scene-a-faire, estimates a protected-expression ratio,a dn writes an "ordinary observer" verdict. Responses are cached to disk, so the demo runs at **$0**.
+- **Risk score** - a transparent, deterministic score combining the signals into a Low/Moderate/High tier, modeling infringement as the stronger of two pathways: literal copying vs. non-literal copying of protected expression.
 
-The interesting part is the *gap* between them: high semantic similarity with low verbatim overlap
-is the signature of paraphrase which is exactly what later milestones will weight against legal 
-*protectability*.
+The interesting result: **high semantic similarity != high legal risk.** Two articles about the same event are ~90% semantically similar but score LOW, because the shared material is unprotectable facts - while a paraphrase of protected prose scores higher despite little verbatim overlap. Modeling that gap is the point.
 
 ## Run it
 ```bash
