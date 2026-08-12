@@ -30,8 +30,10 @@ is the signature of paraphrase which is exactly what later milestones will weigh
 python3 -m venv .venv && source ./venv/bin/activate
 pip install -r requirements.txt
 python3 -m oo.cli samples/a_paraphrase.txt samples/b_original.txt
+'''
 
 ### Example output
+'''json
 {
   "semantic": {
     "document_similarity": 0.801,
@@ -53,3 +55,4 @@ python3 -m oo.cli samples/a_paraphrase.txt samples/b_original.txt
     "len_b_chars": 226
   }
 }
+'''
