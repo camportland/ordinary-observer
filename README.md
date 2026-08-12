@@ -10,7 +10,7 @@ principle that infringement turns on how an *ordinary observer* perceives copied
 In Progress - building in weekly milestones
 
 - [X] **Week 1** - Local similarity engine (semantic, verbatim, structural). Runs offline, $0 cost
-- [ ] Week 2 - Legal reasoning layer (idea vs. expression, risk scoring)
+- [X] **Week 2** - Legal reasoning layer (idea vs. expression, risk scoring)
 - [ ] Week 3 - Web UI + live demo
 - [ ] Week 4 - Calibration, docs, polish
 
@@ -56,3 +56,9 @@ python3 -m oo.cli samples/a_paraphrase.txt samples/b_original.txt
   }
 }
 ```
+
+## Tech
+Python - `sentence-transformers` (local, no API) - `rapidfuzz` - `numpy` - Anthropic API (cached)
+
+## Design
+Key design decisions and their rationale are logged in [DECISIONS.md] (DECISIONS.md).
