@@ -27,6 +27,9 @@ The interesting result: **high semantic similarity != high legal risk.** Two art
 ```bash
 python3 -m venv .venv && source ./venv/bin/activate
 pip install -r requirements.txt
+python -m scripts.build_showcases
+
+#quick local-similarity check on any two files
 python3 -m oo.cli samples/a_paraphrase.txt samples/b_original.txt
 ```
 
