@@ -1,0 +1,269 @@
+[
+  {
+    "id": "verbatim_copy",
+    "title": "Near-verbatim_copy",
+    "expected": "HIGH",
+    "work_a": "The old lighthouse had guarded the rocky harbor for over a century. Each night its beam swept across the warer, warning ships away from the jagged reef.",
+    "work_b": "The old lighthouse had guarded the rocky harbor for over a century. Every night its beam swept across the water, warning ships away from the jagged reef",
+    "analysis": {
+      "risk": {
+        "score": 0.6974,
+        "tier": "HIGH",
+        "components": {
+          "verbatim": 0.6,
+          "semantic": 0.9371,
+          "protectability": 0.9,
+          "protected_semantic": 0.8434
+        }
+      },
+      "similarity": {
+        "semantic": {
+          "document_similarity": 0.9371,
+          "max_sentence_similarity": 1.0,
+          "mean_best_sentence_similarity": 0.9334
+        },
+        "verbatim": {
+          "ngram_containment_5": 0.5652,
+          "ngram_containment_8": 0.25,
+          "longest_common_run_words": 12,
+          "fuzzy_token_set_ratio": 0.9653
+        },
+        "structural": {
+          "aligned_pairs": 2,
+          "order_agreement": 1.0
+        },
+        "meta": {
+          "len_a_chars": 152,
+          "len_b_chars": 152
+        }
+      },
+      "legal": {
+        "shared_elements": [
+          {
+            "text": "\"The old lighthouse had guarded the rocky harbor for over a century.\"",
+            "kind": "verbatim",
+            "protectable": true,
+            "rationale": "Word-for-word identical sentence. The particular word choices (\"guarded,\" \"rocky harbor,\" \"for over a century\") reflect authorial selection and personification, not a dictated way of stating a fact. Original expression, protectable."
+          },
+          {
+            "text": "\"Each/Every night its beam swept across the water, warning ships away from the jagged reef.\"",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "Identical but for the single substitution of \"Each\" for \"Every\" (plus a typo, \"warer\"). A one-word change is a trivial variation that does not avoid the copying of the sentence's structure, imagery, and diction (\"beam swept across,\" \"jagged reef\")."
+          },
+          {
+            "text": "The general concept of a lighthouse whose light warns ships away from dangerous rocks",
+            "kind": "idea_or_fact",
+            "protectable": false,
+            "rationale": "The functional purpose of a lighthouse is an unprotectable idea/fact; anyone may write about it."
+          },
+          {
+            "text": "Stock coastal imagery: aged lighthouse, rocky harbor, nightly sweeping beam, jagged reef",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "Standard, expected imagery in maritime/coastal description; these motifs alone are scenes a faire, though the specific sentences combining them here are not."
+          }
+        ],
+        "protected_expression_ratio": 0.9,
+        "ordinary_observer_narrative": "An ordinary reader comparing these two passages would see the same text. Work A reproduces Work B's opening sentence exactly and its second sentence with only one synonym swap (\"Each\" for \"Every\") plus an apparent typographical error. Nothing has been added, reframed, or recontextualized. While the underlying idea (a lighthouse warning ships off rocks) and the stock coastal imagery are free for all to use, Work B's particular sentences are original expression, and Work A takes them essentially whole. This is a very high infringement risk for the copied portion; the only mitigating factor is the small absolute quantity of text at issue, which bears on the extent of damages rather than on whether copying of protectable expression occurred.",
+        "fair_use_consideration": "No obvious fair-use shelter appears: there is no parody, commentary, criticism, or other transformation \\u2014 the purpose and character of the use are identical to the original's (straightforward descriptive narration). The work is creative (factor two favors the owner) and the taking is qualitatively near-total for the passage involved. The strongest argument available would be de minimis copying / small quantitative take if only these two sentences were lifted from a much longer protected work; conversely, if this is the whole or the heart of Work B, that argument collapses."
+      },
+      "works": {
+        "a_chars": 152,
+        "b_chars": 152
+      }
+    }
+  },
+  {
+    "id": "same_facts",
+    "title": "Two articles, same event (the divergence case)",
+    "expected": "LOW",
+    "work_a": "Tuesday's 5.2 quake near Ridgecrest caused no injuries. Authories reported only minor damage, mainly to roadways.",
+    "work_b": "A 5.2-magnitude earthquare struck near Ridgecrest on Tuesday morning. No injuries were reported, and officials said damage was limited to cracked roads.",
+    "analysis": {
+      "risk": {
+        "score": 0.0729,
+        "tier": "LOW",
+        "components": {
+          "verbatim": 0.1,
+          "semantic": 0.6472,
+          "protectability": 0.05,
+          "protected_semantic": 0.0324
+        }
+      },
+      "similarity": {
+        "semantic": {
+          "document_similarity": 0.6472,
+          "max_sentence_similarity": 0.699,
+          "mean_best_sentence_similarity": 0.6
+        },
+        "verbatim": {
+          "ngram_containment_5": 0.0,
+          "ngram_containment_8": 0.0,
+          "longest_common_run_words": 2,
+          "fuzzy_token_set_ratio": 0.6264
+        },
+        "structural": {
+          "aligned_pairs": 1,
+          "order_agreement": 0.0
+        },
+        "meta": {
+          "len_a_chars": 113,
+          "len_b_chars": 152
+        }
+      },
+      "legal": {
+        "shared_elements": [
+          {
+            "text": "Magnitude 5.2 earthquake",
+            "kind": "idea_or_fact",
+            "protectable": false,
+            "rationale": "Objective seismological fact; facts are not copyrightable regardless of who reports them first."
+          },
+          {
+            "text": "Location near Ridgecrest",
+            "kind": "idea_or_fact",
+            "protectable": false,
+            "rationale": "Geographic fact about the event; no expressive originality."
+          },
+          {
+            "text": "Occurred on Tuesday",
+            "kind": "idea_or_fact",
+            "protectable": false,
+            "rationale": "Temporal fact. Work A also omits 'morning,' showing independent condensation."
+          },
+          {
+            "text": "No injuries reported",
+            "kind": "idea_or_fact",
+            "protectable": false,
+            "rationale": "Standard newsworthy fact; there are very few ways to state it, so expression merges with the idea."
+          },
+          {
+            "text": "Damage limited/minor, confined to roads",
+            "kind": "paraphrase",
+            "protectable": false,
+            "rationale": "Work A restates 'damage was limited to cracked roads' as 'only minor damage, mainly to roadways.' The paraphrase tracks the underlying fact rather than distinctive wording; word choice differs materially."
+          },
+          {
+            "text": "Attribution to officials/authorities",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "Sourcing damage assessments to 'officials' or 'authorities' is a standard journalistic convention in disaster reporting."
+          },
+          {
+            "text": "Inverted-pyramid ordering: magnitude/location/time, then casualties, then damage",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "Conventional hard-news structure for quake briefs; dictated by genre practice, not creative selection."
+          },
+          {
+            "text": "The proper noun 'Ridgecrest' and the numeral '5.2'",
+            "kind": "verbatim",
+            "protectable": false,
+            "rationale": "Verbatim overlap is confined to unavoidable identifiers of the underlying event; no alternative expression exists."
+          }
+        ],
+        "protected_expression_ratio": 0.05,
+        "ordinary_observer_narrative": "An ordinary reader would say these two passages report the same news, not that one copies the other's writing. Every shared element is a hard fact about a real earthquake \\u2014 magnitude, place, day, no injuries, road damage \\u2014 plus the standard news habit of crediting 'officials.' The sentences themselves are built differently: Work B uses a single flowing compound sentence with 'struck near Ridgecrest on Tuesday morning' and 'cracked roads'; Work A leads with a possessive construction ('Tuesday's 5.2 quake'), splits into two clipped sentences, and substitutes 'minor damage, mainly to roadways.' No distinctive phrase, metaphor, or unusual sequencing survives the comparison. Infringement risk is low. The main residual caution is not copyright but hot-news/misappropriation-style concerns if Work A systematically free-rides on another outlet's original reporting, and the factual drift from 'limited to cracked roads' to 'mainly to roadways' is an editorial accuracy issue rather than a similarity issue.",
+        "fair_use_consideration": "Even if any protectable expression were found, fair use would weigh strongly for Work A: the use is news reporting of factual matter, the original is a thin factual news brief at the low end of the protection spectrum, the amount taken is a handful of unavoidable data points, and a condensed rewrite does not substitute for or harm the market for the original article. The condensation into a shorter brief adds modest transformative value in purpose and audience."
+      },
+      "works": {
+        "a_chars": 113,
+        "b_chars": 152
+      }
+    }
+  },
+  {
+    "id": "ai_paraphrase",
+    "title": "AI 'rewrite in your own words' of a source",
+    "expected": "MODERATE",
+    "work_a": "The century-old lighthouse long shielded the rocky harbor; nightly its light traced the water, steering boats away from the dangerous reef.",
+    "work_b": "For more than a hundred years, the ancient lighthouse had protected the stony harbor. Each evening its beam moved across the sea, keeping vessels clear of the sharp reef.",
+    "analysis": {
+      "risk": {
+        "score": 0.1952,
+        "tier": "LOW",
+        "components": {
+          "verbatim": 0.05,
+          "semantic": 0.6883,
+          "protectability": 0.6,
+          "protected_semantic": 0.413
+        }
+      },
+      "similarity": {
+        "semantic": {
+          "document_similarity": 0.6883,
+          "max_sentence_similarity": 0.5927,
+          "mean_best_sentence_similarity": 0.5927
+        },
+        "verbatim": {
+          "ngram_containment_5": 0.0,
+          "ngram_containment_8": 0.0,
+          "longest_common_run_words": 1,
+          "fuzzy_token_set_ratio": 0.5121
+        },
+        "structural": {
+          "aligned_pairs": 0,
+          "order_agreement": 0.0
+        },
+        "meta": {
+          "len_a_chars": 139,
+          "len_b_chars": 170
+        }
+      },
+      "legal": {
+        "shared_elements": [
+          {
+            "text": "An old lighthouse that has protected a rocky/stony harbor for roughly a century ('century-old' vs. 'For more than a hundred years, the ancient lighthouse')",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "The specific combination of age, 'ancient/century-old' characterization, and the 'protected the stony/rocky harbor' phrasing is an authorial expressive choice, not a fact about a real lighthouse; A tracks it with mere synonym substitution."
+          },
+          {
+            "text": "Nightly recurrence of the light ('nightly' vs. 'Each evening')",
+            "kind": "paraphrase",
+            "protectable": false,
+            "rationale": "A lighthouse operating each night is inherent to the subject matter; the temporal adverb is a near-inevitable way of expressing it (merger/scenes a faire)."
+          },
+          {
+            "text": "The beam moving across the water ('its light traced the water' vs. 'its beam moved across the sea')",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "The image of a sweeping beam is stock, but the compressed clause structure 'its beam/light [verb] the sea/water' mirrors B's particular phrasing closely enough to appropriate expression."
+          },
+          {
+            "text": "Guiding boats/vessels away from a sharp/dangerous reef",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "The idea of warning ships from a reef is unprotectable, but the specific participial closing clause ('keeping vessels clear of the sharp reef' \u2192 'steering boats away from the dangerous reef') is a one-to-one substitution of B's wording."
+          },
+          {
+            "text": "Core concept: a lighthouse warns ships away from hazardous rocks",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "Quintessential stock maritime imagery; the function of a lighthouse is a fact and a genre staple available to all authors."
+          },
+          {
+            "text": "Sentence architecture: (1) age/protection of harbor, then (2) nightly beam over water, then (3) result of keeping ships off the reef, in that order, in two clauses",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "Selection, sequence and arrangement of imagery within a short passage is protectable expression; A reproduces B's ordering and clause structure almost exactly."
+          },
+          {
+            "text": "Individual nouns: 'lighthouse,' 'harbor,' 'reef'",
+            "kind": "verbatim",
+            "protectable": false,
+            "rationale": "Single common words and short phrases are not copyrightable and are the only practical terms for these referents."
+          }
+        ],
+        "protected_expression_ratio": 0.6,
+        "ordinary_observer_narrative": "An ordinary reader comparing the two passages would immediately recognize Work A as a rewrite of Work B rather than an independent description. Almost nothing is copied word-for-word, but every element appears in the same order with one-for-one synonym swaps: 'more than a hundred years' becomes 'century-old,' 'ancient' becomes 'century-old/long,' 'stony' becomes 'rocky,' 'each evening' becomes 'nightly,' 'beam moved across the sea' becomes 'light traced the water,' and 'keeping vessels clear of the sharp reef' becomes 'steering boats away from the dangerous reef.' Some of the overlap is unprotectable \u2014 lighthouses do warn ships off reefs, and that idea plus its stock imagery is free for anyone. But the paraphrase goes beyond the idea and tracks B's particular sentence architecture and word-choice pattern. Risk of a substantial-similarity finding is high for this passage, subject to the caveat that the excerpt is very short, so a court assessing the works as wholes might find the taking quantitatively de minimis if B is a long work and this is an isolated sentence.",
+        "fair_use_consideration": "No obvious fair-use shield: the rewrite is not parodic, critical, or commentary-based, and it serves the same expressive/descriptive purpose as the original, so it is non-transformative. Factor two (creative fiction-style prose) favors B. The amount taken is tiny in absolute terms, which helps on factor three if B is a full-length work, but the taking is qualitatively complete as to this passage. Market-harm analysis would turn on whether A substitutes for B. A mechanical-paraphrase defense ('I used my own words') is not a recognized defense where structure and expressive choices are carried over."
+      },
+      "works": {
+        "a_chars": 139,
+        "b_chars": 170
+      }
+    }
+  }
+]
