@@ -268,5 +268,293 @@
         "b_chars": 170
       }
     }
+  },
+  {
+    "id": "ai_regurgitation",
+    "title": "LLM reproduces memorized training text",
+    "expected": "HIGH",
+    "work_a": "Marguerite pressed her palm to the frosted glass and watched the gaslamps blur into halos of campber. Below, a hansom cab rattled over the cobbles, and she thought, not for the first time, that the city kept its secrets the way she kept hers.",
+    "work_b": "Marguerite pressed her palm aagainst the frosted glass and watched the gaslamps blur into halos of amber. Below, a hansom cab rattled over the cobbles, and she thought, not for the first time, that the city kept its secrets the way she kept hers.",
+    "analysis": {
+      "risk": {
+        "score": 1.0,
+        "tier": "HIGH",
+        "components": {
+          "verbatim": 1.0,
+          "semantic": 0.9311,
+          "protectability": 0.95,
+          "literal_pathway": 1.0,
+          "nonliteral_pathway": 0.8845
+        }
+      },
+      "similarity": {
+        "semantic": {
+          "document_similarity": 0.9311,
+          "max_sentence_similarity": 1.0,
+          "mean_best_sentence_similarity": 0.9448
+        },
+        "verbatim": {
+          "ngram_containment_5": 0.75,
+          "ngram_containment_8": 0.6486,
+          "longest_common_run_words": 27,
+          "fuzzy_token_set_ratio": 0.9704
+        },
+        "structural": {
+          "aligned_pairs": 2,
+          "order_agreement": 1.0
+        },
+        "meta": {
+          "len_a_chars": 242,
+          "len_b_chars": 246
+        }
+      },
+      "legal": {
+        "shared_elements": [
+          {
+            "text": "\"Marguerite pressed her palm [to/against] the frosted glass and watched the gaslamps blur into halos of amber.\"",
+            "kind": "verbatim",
+            "protectable": true,
+            "rationale": "Word-for-word reproduction of a distinctive, creatively chosen sentence, differing only by the preposition 'to' vs. 'against' and an apparent typo ('campber' for 'amber'). The imagery, diction, and rhythm are original expression, not dictated by any underlying idea."
+          },
+          {
+            "text": "\"Below, a hansom cab rattled over the cobbles,\"",
+            "kind": "verbatim",
+            "protectable": true,
+            "rationale": "Identical wording. While a hansom cab on cobblestones is a stock Victorian-setting detail (scene a faire at the level of idea), the specific phrasing and placement are copied verbatim and are protectable as expression."
+          },
+          {
+            "text": "\"and she thought, not for the first time, that the city kept its secrets the way she kept hers.\"",
+            "kind": "verbatim",
+            "protectable": true,
+            "rationale": "Identical, distinctive figurative construction with a parallelism/comparison unique to the author; no merger, since countless other ways exist to convey a character's secretiveness."
+          },
+          {
+            "text": "Character named Marguerite observing a city from a window",
+            "kind": "idea_or_fact",
+            "protectable": false,
+            "rationale": "The bare situation (a woman at a window looking out) and a common given name are unprotectable ideas/elements standing alone."
+          },
+          {
+            "text": "Victorian/gaslit urban atmosphere: gaslamps, hansom cab, cobblestones, frosted glass",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "Standard, expected furniture of period fiction set in a 19th-century city; unprotectable at the level of setting, though the particular sentences deploying them here are copied verbatim."
+          },
+          {
+            "text": "Narrative structure: sensory observation \\u exterior street detail \\u interior reflection",
+            "kind": "idea_or_fact",
+            "protectable": false,
+            "rationale": "A generic ordering of description-to-introspection is a commonplace narrative technique, not protectable in the abstract."
+          }
+        ],
+        "protected_expression_ratio": 0.95,
+        "ordinary_observer_narrative": "An ordinary reader comparing these two passages would conclude they are the same passage. Work A reproduces Work B essentially word for word, sentence for sentence, punctuation included; the only differences are a swapped preposition ('to' for 'against') and what appears to be a typographical error ('campber' for 'amber'). Nothing has been added, reframed, condensed, or recast. Because the copying reaches the author's specific word choices, imagery, and the distinctive closing simile \\the the situational idea only the risk of a substantial-similarity finding is very high. The presence of some unprotectable period-genre furniture (gaslamps, hansom cabs, cobbles) does not save Work A, because it is the expression conveying that furniture that has been taken.",
+        "fair_use_consideration": "No obvious fair-use footing appears on this excerpt. There is no parody, criticism, commentary, or other transformative purpose visible \\u the passage is copied for the same expressive, aesthetic purpose as the original. The taking is qualitatively total for the excerpt at issue, though the quantitative significance would depend on how much of Work B's whole this passage represents and whether Work A as a whole copies comparably. If Work A is a short excerpt used within a larger critical or scholarly discussion, or if the near-identity results from both works drawing on a common public-domain source, that context could change the analysis; nothing in the material provided suggests it. This is a risk assessment, not legal advice."
+      },
+      "works": {
+        "a_chars": 242,
+        "b_chars": 246
+      }
+    }
+  },
+  {
+    "id": "scene_a_faire",
+    "title": "Shared genre conventions (scene a faire)",
+    "expected": "LOW",
+    "work_a": "The neon bled across the wet pavement as the dame stepped through my door, all trouble and red silk, promising a sleepless night. I splashed whiskey into a glass and braced for whatever story she'd invented.",
+    "work_b": "Rain hammered the neon-slick street when she walked into my office - trouble in a red dress, the kind of dame who meant a long night and a longer bar tab. I poured two fingers of bourbon and waited for the lie.",
+    "analysis": {
+      "risk": {
+        "score": 0.2055,
+        "tier": "LOW",
+        "components": {
+          "verbatim": 0.1,
+          "semantic": 0.685,
+          "protectability": 0.3,
+          "literal_pathway": 0.1,
+          "nonliteral_pathway": 0.2055
+        }
+      },
+      "similarity": {
+        "semantic": {
+          "document_similarity": 0.685,
+          "max_sentence_similarity": 0.5436,
+          "mean_best_sentence_similarity": 0.5209
+        },
+        "verbatim": {
+          "ngram_containment_5": 0.0,
+          "ngram_containment_8": 0.0,
+          "longest_common_run_words": 2,
+          "fuzzy_token_set_ratio": 0.5619
+        },
+        "structural": {
+          "aligned_pairs": 0,
+          "order_agreement": 0.0
+        },
+        "meta": {
+          "len_a_chars": 207,
+          "len_b_chars": 210
+        }
+      },
+      "legal": {
+        "shared_elements": [
+          {
+            "text": "Wet pavement / rain-slicked street lit by neon ('neon bled across the wet pavement' vs. 'Rain hammered the neon-slick street')",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "Neon reflecting on rain-wet streets is the archetypal establishing image of hardboiled/noir fiction and film noir; it is stock atmosphere rather than original expression. The specific verbs differ ('bled' vs. 'hammered')."
+          },
+          {
+            "text": "A woman ('the dame') entering the private detective's office/door",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "The femme fatale walking into the gumshoe's office is the genre's defining opening beat and is unprotectable as a stock situation; the word 'dame' is genre vernacular."
+          },
+          {
+            "text": "She is described as 'trouble' and dressed in red ('all trouble and red silk' vs. 'trouble in a red dress')",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "The compressed appositive formula 'trouble in a red dress' is a somewhat distinctive expressive choice; Work A tracks it closely while substituting 'red silk' for 'red dress.' The underlying idea (dangerous woman in red) is stock, so protection is thin but the near-identical phrasing is the strongest point of concern."
+          },
+          {
+            "text": "Prediction that the encounter means a long/sleepless night ('promising a sleepless night' vs. 'meant a long night and a longer bar tab')",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "Similar rhetorical move and placement, but Work A drops the original's distinctive comparative twist ('and a longer bar tab'), which is the most original flourish in Work B. Only the generic 'long night' idea carries over."
+          },
+          {
+            "text": "Narrator pours himself brown liquor ('splashed whiskey into a glass' vs. 'poured two fingers of bourbon')",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "The hard-drinking detective pouring whiskey/bourbon is quintessential genre business; the concrete wording differs entirely ('splashed... into a glass' vs. 'two fingers')."
+          },
+          {
+            "text": "Narrator waits, expecting the client to lie ('braced for whatever story she'd invented' vs. 'waited for the lie')",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "Same closing beat in the same position, expressing the same cynical anticipation of deception; Work B's terse 'waited for the lie' is an expressive choice that Work A restates in expanded, different words. Thin protection given genre convention of the untrustworthy client."
+          },
+          {
+            "text": "First-person, past-tense wisecracking detective voice with clipped sentence rhythm",
+            "kind": "idea_or_fact",
+            "protectable": false,
+            "rationale": "Narrative voice, tense, and genre style are unprotectable ideas/style, not expression."
+          },
+          {
+            "text": "Ordering of beats: setting/weather image \u2192 woman enters \u2192 woman characterized \u2192 forecast of the night \u2192 narrator pours drink \u2192 narrator awaits her falsehood",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "Selection and sequence of beats can be protectable as the arrangement of expression; here the parallel is close and beat-for-beat, though the sequence itself is largely dictated by the conventional noir opening, weakening the claim."
+          },
+          {
+            "text": "No verbatim strings beyond single genre words ('neon,' 'trouble,' 'dame,' 'red')",
+            "kind": "verbatim",
+            "protectable": false,
+            "rationale": "Isolated common words and genre terms are too short and unoriginal to be protected; there is no copied sentence or distinctive phrase reproduced word-for-word."
+          }
+        ],
+        "protected_expression_ratio": 0.3,
+        "ordinary_observer_narrative": "An ordinary reader would immediately say these two passages feel like the same opening \u2014 same rainy neon street, same woman in red walking in, same whiskey, same cynical expectation of a lie, in the same order. But most of that recognition comes from the noir genre itself, not from anything the second author invented: every one of those beats is a cliche of hardboiled detective fiction, and a reader steeped in the genre would find them in dozens of unrelated stories. There is no verbatim copying of any sentence, and Work B's most original touches (the 'longer bar tab' comparative, 'two fingers of bourbon,' 'Rain hammered') do not appear in Work A. The one genuinely worrying overlap is the near-identical appositive 'trouble in a red dress' / 'all trouble and red silk' plus the beat-for-beat parallel structure, which suggests Work A may have been written with Work B in view. Overall risk is low-to-moderate: a plaintiff would have to persuade a court that the sequence and the 'trouble in red' formula amount to protectable arrangement rather than stock genre furniture, and after filtering out scenes a faire the remaining similarity is thin.",
+        "fair_use_consideration": "Nothing here is obviously parodic or critical, so a transformative-use defense is weak on its face; Work A appears to be another straight noir opening serving the same expressive purpose and market, which cuts against factors one and four. The strongest defenses are not fair use at all but (a) lack of substantial similarity after filtering unprotectable genre elements, and (b) the de minimis nature of the taking \u2014 roughly three dozen words of atmosphere, no plot, characters, or extended text. If Work A were presented as pastiche or genre satire of noir cliches, a transformative-purpose argument would strengthen considerably."
+      },
+      "works": {
+        "a_chars": 207,
+        "b_chars": 210
+      }
+    }
+  },
+  {
+    "id": "parody",
+    "title": "Parody/transformative use",
+    "expected": "MODERATE",
+    "work_a": "Rise each morning with a caffeinated heart, for every day is a bill unpaid, and the road ahead, though steep with traffic, rewards the faithful commuter with parking none can find.",
+    "work_b": "Rise each morning with a grateful heart, for every dawn is a gift unearned, and the road ahead, though steep, rewards the faithful climber with vistas none can steal.",
+    "analysis": {
+      "risk": {
+        "score": 0.4705,
+        "tier": "MODERATE",
+        "components": {
+          "verbatim": 0.3,
+          "semantic": 0.5881,
+          "protectability": 0.8,
+          "literal_pathway": 0.3,
+          "nonliteral_pathway": 0.4705
+        }
+      },
+      "similarity": {
+        "semantic": {
+          "document_similarity": 0.5881,
+          "max_sentence_similarity": 0.5881,
+          "mean_best_sentence_similarity": 0.5881
+        },
+        "verbatim": {
+          "ngram_containment_5": 0.1111,
+          "ngram_containment_8": 0.0,
+          "longest_common_run_words": 6,
+          "fuzzy_token_set_ratio": 0.7712
+        },
+        "structural": {
+          "aligned_pairs": 0,
+          "order_agreement": 0.0
+        },
+        "meta": {
+          "len_a_chars": 180,
+          "len_b_chars": 166
+        }
+      },
+      "legal": {
+        "shared_elements": [
+          {
+            "text": "\"Rise each morning with a [adjective] heart\" \u2014 identical opening clause with only the adjective swapped (grateful \u2192 caffeinated)",
+            "kind": "verbatim",
+            "protectable": true,
+            "rationale": "An original, non-obligatory phrasing choice; the aphoristic wording is expression, not a bare idea about waking up."
+          },
+          {
+            "text": "\"for every [dawn/day] is a [gift unearned / bill unpaid]\" \u2014 identical clause frame with substituted nouns",
+            "kind": "paraphrase",
+            "protectable": true,
+            "rationale": "The parallel appositive construction and its rhetorical cadence are the author's expressive choices; the substitution is a close variation rather than independent expression."
+          },
+          {
+            "text": "\"and the road ahead, though steep, rewards the faithful [climber/commuter] with [vistas/parking] none can [steal/find]\"",
+            "kind": "verbatim",
+            "protectable": true,
+            "rationale": "Near word-for-word reproduction of a distinctive multi-clause sentence, including the subordinate concession, the verb 'rewards,' the epithet 'the faithful ___,' and the closing 'none can ___' relative clause."
+          },
+          {
+            "text": "Three-part aphoristic structure: imperative opening, causal 'for' justification, concluding 'and the road ahead' promise",
+            "kind": "verbatim",
+            "protectable": true,
+            "rationale": "The specific sequence and rhythm of clauses is the selection-and-arrangement of expression, copied wholesale."
+          },
+          {
+            "text": "The general idea of an uplifting morning maxim urging gratitude and perseverance",
+            "kind": "idea_or_fact",
+            "protectable": false,
+            "rationale": "Themes of gratitude, effort, and reward are unprotectable ideas."
+          },
+          {
+            "text": "The uphill-road-as-life metaphor and the reward-at-the-summit trope",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "Stock imagery pervasive in inspirational and devotional writing; standard for the genre."
+          },
+          {
+            "text": "Elevated, sermon-like register typical of motivational epigrams",
+            "kind": "scene_a_faire",
+            "protectable": false,
+            "rationale": "Genre convention, not original expression."
+          }
+        ],
+        "protected_expression_ratio": 0.8,
+        "ordinary_observer_narrative": "An ordinary reader who knows Work B would instantly recognize Work A as the same sentence with a handful of words swapped out. The skeleton is preserved word-for-word \u2014 'Rise each morning with a ___ heart, for every ___ is a ___, and the road ahead, though steep, rewards the faithful ___ with ___ none can ___' \u2014 and the substitutions (caffeinated for grateful, bill unpaid for gift unearned, commuter for climber, parking for vistas) track the original slot-for-slot. This is far more than a shared inspirational theme or the stock uphill-road metaphor; it is the specific cadence, syntax, and phrasing of a short, tightly-wrought aphorism. Because the original is brief, copying its structural spine appropriates most of what makes it distinctive, so the taking is qualitatively substantial. Absent a successful fair-use defense, the similarity of protectable expression is high.",
+        "fair_use_consideration": "Work A has a plausible parody defense: it retains B's solemn form while deflating it with mundane, commuter-life substitutions ('bill unpaid,' 'parking none can find'), which comments on and mocks the earnestness of inspirational-quote writing. Under Campbell, that critical target-directed humor is transformative, and copying the recognizable skeleton is arguably necessary for the joke to land ('conjuring up' the original). Counterweights: the taking is nearly the entire short work, and if A is used commercially as a standalone motivational-style product rather than as commentary, the transformative claim weakens and market-substitution concerns rise. Outcome is genuinely contestable \u2014 this is a risk assessment, not legal advice."
+      },
+      "works": {
+        "a_chars": 180,
+        "b_chars": 166
+      }
+    }
   }
 ]

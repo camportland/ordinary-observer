@@ -30,3 +30,19 @@ protectability.
 **Known limitation.** The `literal` pathway isn't scaled by protectability, so verbatim
 copying of *unprotectable facts* (cf. *Fiest v. Rural*) would over-flag. Left simple
 deliberately, noted as future work.
+
+## 2. Fair use is flagged, not scored
+
+**Date:** 08/17/26
+
+**Context.** The parody case scored MODERATE (nonliteral pathway 0.47), not LOW.
+
+**Why that's correct.** Parody copies real protectable expression - the risk score
+measures *sustantial similarity* (the prima facie copying), which is high here. What
+makes parody non-infriging is *fair use*, a separate legal defense.
+
+**Decision.** The risk score answers only "did this copy protected expression?" Fair
+use is surfaced as a **flag** (`legal.fair_use_consideration`), not folded into the
+score. Rationale: fair use is the least predictable area of copyright law; an automated
+tool that quietly decided it would be over-claiming. Better to flag the consideration
+and leave the judgement to a human.

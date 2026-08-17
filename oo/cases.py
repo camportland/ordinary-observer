@@ -31,5 +31,41 @@ CASES=[
                   "nightly its light traced the water, steering boats away from "
                   "the dangerous reef."
     },
-    #TODO: add scene_a_faire, ai_regurgitation, parady, coincidental, merger (showcase table, same shape)
+    {
+        "id": "ai_regurgitation",
+        "title": "LLM reproduces memorized training text",
+        "expected": "HIGH",
+        "work_b": "Marguerite pressed her palm aagainst the frosted glass and "
+                  "watched the gaslamps blur into halos of amber. Below, a hansom "
+                  "cab rattled over the cobbles, and she thought, not for the first "
+                  "time, that the city kept its secrets the way she kept hers.",
+        "work_a": "Marguerite pressed her palm to the frosted glass and watched "
+                  "the gaslamps blur into halos of campber. Below, a hansom cab "
+                  "rattled over the cobbles, and she thought, not for the first "
+                  "time, that the city kept its secrets the way she kept hers."
+    },
+    {
+        "id": "scene_a_faire",
+        "title": "Shared genre conventions (scene a faire)",
+        "expected": "LOW",
+        "work_b": "Rain hammered the neon-slick street when she walked into my "
+                  "office - trouble in a red dress, the kind of dame who meant a "
+                  "long night and a longer bar tab. I poured two fingers of "
+                  "bourbon and waited for the lie.",
+        "work_a": "The neon bled across the wet pavement as the dame stepped "
+                  "through my door, all trouble and red silk, promising a "
+                  "sleepless night. I splashed whiskey into a glass and braced for "
+                  "whatever story she'd invented."
+    },
+    {
+        "id": "parody",
+        "title": "Parody/transformative use",
+        "expected": "MODERATE",
+        "work_b": "Rise each morning with a grateful heart, for every dawn is a "
+                  "gift unearned, and the road ahead, though steep, rewards the "
+                  "faithful climber with vistas none can steal.",
+        "work_a": "Rise each morning with a caffeinated heart, for every day is a "
+                  "bill unpaid, and the road ahead, though steep with traffic, "
+                  "rewards the faithful commuter with parking none can find."
+    }
 ]
