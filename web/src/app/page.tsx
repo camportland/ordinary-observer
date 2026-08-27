@@ -204,6 +204,11 @@ export default function Home() {
         </ul>
         {selected && <Results c={selected} />}
       </div>
+
+      <footer className="mt-10 border-t pt-4 text-xs text-gray-400">
+        Reserach and educational tool. Not legal advice. Analyses are model-generated risk signals, not a determination of infringement.
+      </footer>
+
     </main>
   );
 }
