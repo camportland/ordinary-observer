@@ -1,4 +1,7 @@
 # Ordinary Observer
+
+**🔗 Live demo: https://ordinary-observer.vercel.app/**
+
 A copyright-infringement **risk analyzer** that maps technical text-similarity
 signals to the legal *"substantial similarity"* standard. This follows the
 principle that infringement turns on how an *ordinary observer* perceives copied
