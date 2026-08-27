@@ -35,12 +35,12 @@ CASES=[
         "id": "ai_regurgitation",
         "title": "LLM reproduces memorized training text",
         "expected": "HIGH",
-        "work_b": "Marguerite pressed her palm aagainst the frosted glass and "
+        "work_b": "Marguerite pressed her palm against the frosted glass and "
                   "watched the gaslamps blur into halos of amber. Below, a hansom "
                   "cab rattled over the cobbles, and she thought, not for the first "
                   "time, that the city kept its secrets the way she kept hers.",
         "work_a": "Marguerite pressed her palm to the frosted glass and watched "
-                  "the gaslamps blur into halos of campber. Below, a hansom cab "
+                  "the gaslamps blur into halos of amber. Below, a hansom cab "
                   "rattled over the cobbles, and she thought, not for the first "
                   "time, that the city kept its secrets the way she kept hers."
     },
